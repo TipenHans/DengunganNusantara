@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Navbar from './Navbar';
+import Navbar from './navbar';
 
 import tigaFoto1 from "./assets/TigaFoto1.jpg";
 import tigaFoto2 from "./assets/TigaFoto2.jpg";
