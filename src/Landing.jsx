@@ -36,7 +36,7 @@ import sejarah2 from "./assets/sejarah2.jpg";
 
 import zaki from "./assets/gambarZaki.png";
 
-import infografis from "./assets/infografis Alat Musik Gong.png";
+import infografis from "./assets/Infografis Alat Musik Gong.png";
 
 const Landing = () => {
   const scrollToSection = (id) => {
