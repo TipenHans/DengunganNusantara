@@ -36,6 +36,8 @@ import sejarah2 from "./assets/sejarah2.jpg";
 
 import zaki from "./assets/gambarZaki.png";
 
+import infografis from "./assets/infografis Alat Musik Gong.png";
+
 const Landing = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -90,7 +92,9 @@ const Landing = () => {
           { type: "teks", value: "Krisna mengatakan bahwa kebudayaan gamelan dan gong ini harus dilestarikan karena ini merupakan warisan dari leluhur Nusantara. Namun, Krisna juga mengatakan bahwa walaupun ketertarikan anak muda mengenai kesenian gamelan itu ada, semua ini masih jauh dari harapan karena masih sangat kurang anak muda yang ingin mendalami ilmu mengenai kesenian karawitan ujar Krisna dengan muka yang tenang, tetapi dengan suara yang lelah. " },
           { type: "gambar", value: foto4, caption: "Saron di rumah Pak Krisna  (14/05/2026). (Dok: Muhammad Zaki) " },
           { type: "teks", value: "“Gong ini ‘kan warisan leluhur kita yang harus kita lestarikan. Menurut saya, itu sudah seharusnya menjadi motivasi bahwa kita sebagai penerusnya atau generasi muda untuk melestarikan untuk bisa bahkan bukan melestarikan saja, tapi mengembangkan ke arah yang lebih baik dari sebelum-sebelum kita,” pendapat Krisna dengan muka yang tenang, tetapi bertekad (14/05/2026). " },
-
+          { type: "infografis", value: infografis, caption: "Infografis"},
+          { type: "youtube", value: "gfz_mmKY41Q" },
+          { type: "youtube", value: "nrhvr9JnH80" },
         ]
       }
     },
@@ -123,8 +127,8 @@ const Landing = () => {
           { type: "teks", value: "Di tengah-tengah kemajuan teknologi dan pengaruh budaya dari luar, melestarikan budaya dalam negeri bisa menjadi sesuatu hal yang sulit karena tidak sedikit dari generasi muda yang sudah mulai tidak peduli dengan budaya dalam negeri. Walaupun mungkin kadang terlihat suram, tidak sedikit juga generasi muda yang berusaha untuk melestarikan budaya-budaya yang terdapat di dalam negeri." },
           { type: "teks", value: "Dessy dan pengurus remaja Vihara lainnya merupakan contoh bahwa masih ada anak muda yang peduli dan ingin mempelajari mengenai budaya dan tradisi yang ada di dalam Buddha (Theravada). " },
           { type: "teks", value: "“Kalian (anak muda) perlu tau, kalian perlu bersikap apa ya, bersikap penasaran juga terhadap sesuatu karena mungkin dari hal-hal itu kalian bisa dapat perspektif baru dan pengetahuan yang baru,” saran Dessy untuk generasi muda Indonesia (26/02/2026). " },
-          // { type: "youtube", value: "dQw4w9WgXcQ" },
-          // { type: "youtube", value: "dQw4w9WgXcQ" },
+          { type: "youtube", value: "ICvB6_ohdKA" },
+          { type: "youtube", value: "s0Lm6qRlZAo" },
         ]
       }
     },
@@ -149,6 +153,9 @@ const Landing = () => {
           { type: "teks", value: "Bali sendiri merupakan sebuah tempat yang unik karena Gamelan Bali ini mempunyai peran yang sangat integral dengan kehidupan sehari-hari masyarakat di Bali. Gamelan Bali itu sangat berhubungan dengan kegiatan upacara adat dan oleh karena itu, budaya Gamelan Bali itu harus tetap dilestarikan. " },
           { type: "teks", value: "“Kalau di Bali karena terkait dengan upacara harus ada harus tetap lestari, gak boleh tidak,” ucap Wayan dengan nada bicara yang bertekad (09/04/2026). " },
           { type: "teks", value: "Wayan mengatakan bahwa keunikan seniman dari Bali adalah mengenai kepuasan batin mereka mengenai pelestarian kebudayaan Bali, seniman dari Bali bukan mengejar uang, melainkan kepuasan batin. Muka Wayan terlihat dengan sangat penuh harapan karena dia tau bahwa budaya Bali tidak akan pernah punah. " },
+          { type: "youtube", value: "RRSJCj9Pzoo" },
+          { type: "youtube", value: "zNrv7U94Ku4" },
+          { type: "youtube", value: "OrUS5iWxkSA" },
         ]
       }
     },
@@ -176,6 +183,9 @@ const Landing = () => {
           { type: "teks", value: "“Teng, teng, teng,” walaupun gong ini hanya dibunyikan sebanyak tiga kali, efek dari suara gong tersebut bisa mengubah suasana gereja jadi hening hingga menyentuh banyak hati umat. " },
           { type: "teks", value: "“Sering kali sekarang kita sudah melihat ibadah sebagai formalitas saja, tetapi justru kalau kita misalnya memahami sejarah atau makna-makna spiritual di balik tata perayaan agama kita masing-masing, itu pasti akan meningkatkan pemaknaan dan juga keinginan kita untuk semakin mendekatkan diri kepada Tuhan,” ujar Sara dengan suara yang bertekad (28/02/2026). " },
           { type: "teks", value: "Gong ini bukan hanya sekedar sebuah alat yang digunakan saat acara keagamaan, melainkan juga sebagai pengingat bagi kita bahwa banyak benda yang kita sering temui dalam keseharian kita mempunyai sebuah makna dan filosofi yang lebih dalam. Dengan mempelajari makna dan filosofi dari benda tersebut, kita bisa lebih menghargai acara atau kegiatan yang berasosiasi dengan benda tersebut. " },
+          { type: "youtube", value: "0k9WyxoDjnM" },
+          { type: "youtube", value: "yz8fs-QHqBg" },
+          { type: "youtube", value: "Q2rtnxp9zvA" },
 
         ]
       }
@@ -217,28 +227,34 @@ const Landing = () => {
   const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
 
   return (
-    <div className="bg-stone-950 text-stone-200 font-serif overflow-x-hidden">
+    
+    <div className="bg-[#BFD4DB] text-[#2F3E4E] font-serif overflow-x-hidden">
       <Navbar scrollToSection={scrollToSection} />
 
+      {}
       <section 
         id="section-1"
         className="relative h-screen w-full flex flex-col items-center justify-center bg-fixed bg-center bg-cover"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(12,10,9,1)), url(${foto15})`        
+          
+          backgroundImage: `linear-gradient(to bottom, rgba(52, 73, 121, 0.6), #BFD4DB), url(${foto15})`        
         }}
       >
         <div className="text-center animate-fade-in px-4">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-amber-500 mb-4 drop-shadow-2xl">
+          {}
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-4 drop-shadow-2xl bg-gradient-to-r from-[#2F3E4E] via-[#2F3E4E] to-[#78A2CC] bg-clip-text text-transparent">
             DENGUNGAN NUSANTARA
           </h1>
-          <p className="text-xl md:text-2xl text-stone-400 font-light tracking-[0.3em] uppercase">
+          {}
+          <p className="text-xl md:text-2xl text-[#4A647A] font-light tracking-[0.3em] uppercase">
             Budaya Alat Musik Gong yang Terdapat di Nusantara
           </p>
         </div>
 
+        {}
         <button 
           onClick={() => scrollToSection('section-2')}
-          className="absolute bottom-20 animate-bounce flex flex-col items-center text-amber-500 hover:text-amber-400 transition-colors"
+          className="absolute bottom-20 animate-bounce flex flex-col items-center text-[#2F3E4E] hover:text-[#2F3E4E] transition-colors"
         >
           <span className="text-xs uppercase tracking-widest mb-2 font-sans">Scroll</span>
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,36 +263,40 @@ const Landing = () => {
         </button>
       </section>
 
+      {}
       <section 
         id="section-2"
         className="relative min-h-screen py-24 bg-fixed bg-center bg-cover"
         style={{
-          backgroundImage: `linear-gradient(rgba(12,10,9,0.9), rgba(12,10,9,0.9)), url('https://images.unsplash.com/photo-1571244856003-0d53cb059fc5?q=80&w=1600')`
+          
+          backgroundImage: `linear-gradient(rgba(18, 24, 38, 0.92), rgba(18, 24, 38, 0.92)), url('https://images.unsplash.com/photo-1571244856003-0d53cb059fc5?q=80&w=1600')`
         }}
       >
-        <div className="hidden md:block absolute top-[15%] left-[5%] w-40 h-40 md:w-56 md:h-56 opacity-75 pointer-events-none z-0 transform -rotate-12 select-none">
+        <div className="hidden md:block absolute top-[15%] left-[5%] w-40 h-40 md:w-56 md:h-56 opacity-50 pointer-events-none z-0 transform -rotate-12 select-none filter drop-shadow-[0_0_15px_rgba(152,150,187,0.3)]">
           <img src={ilustrasi1} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
-        <div className="hidden md:block absolute bottom-[5%] right-[5%] w-40 h-40 md:w-56 md:h-56 opacity-70 pointer-events-none z-0 transform rotate-45 select-none">
+        <div className="hidden md:block absolute bottom-[5%] right-[5%] w-40 h-40 md:w-56 md:h-56 opacity-45 pointer-events-none z-0 transform rotate-45 select-none filter drop-shadow-[0_0_15px_rgba(152,150,187,0.3)]">
           <img src={ilustrasi2} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
+        
         <div className="max-w-4xl mx-auto px-6">
+          {}
           <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-square overflow-hidden rounded-lg shadow-2xl border border-stone-800">
+            <div className="aspect-square overflow-hidden rounded-lg shadow-2xl border border-[#78A2CC]/50">
               <img 
                 src={tigaFoto1} 
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" 
                 alt="Gong 1" 
               />
             </div>
-            <div className="aspect-square overflow-hidden rounded-lg shadow-2xl border border-stone-800">
+            <div className="aspect-square overflow-hidden rounded-lg shadow-2xl border border-[#78A2CC]/50">
               <img 
                 src={tigaFoto2} 
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" 
                 alt="Gong 2" 
               />
             </div>
-            <div className="col-span-2 aspect-video overflow-hidden rounded-lg shadow-2xl border border-stone-800">
+            <div className="col-span-2 aspect-video overflow-hidden rounded-lg shadow-2xl border border-[#78A2CC]/50">
               <img 
                 src={tigaFoto3} 
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" 
@@ -286,7 +306,7 @@ const Landing = () => {
           </div>
 
           <div className="flex justify-center mt-12">
-            <button onClick={() => scrollToSection('section-3')} className="text-amber-600 hover:text-amber-500 animate-pulse">
+            <button onClick={() => scrollToSection('section-3')} className="text-[#78A2CC] hover:text-[#2F3E4E] animate-pulse">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
               </svg>
@@ -295,77 +315,85 @@ const Landing = () => {
         </div>
       </section>
 
-      <section id="section-3" className="min-h-screen bg-stone-900 relative overflow-hidden py-16">
-        <div className="hidden md:block absolute top-[30%] left-[5%] w-40 h-40 md:w-56 md:h-56 opacity-75 pointer-events-none z-0 transform -rotate-12 select-none">
+      {}
+      {}
+      <section id="section-3" className="min-h-screen bg-[#AECBD6] relative overflow-hidden py-16">
+        <div className="hidden md:block absolute top-[30%] left-[5%] w-40 h-40 md:w-56 md:h-56 opacity-50 pointer-events-none z-0 transform -rotate-12 select-none">
           <img src={ilustrasi3} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
-        <div className="hidden md:block absolute bottom-[20%] right-[5%] w-40 h-40 md:w-56 md:h-56 opacity-70 pointer-events-none z-0 transform rotate-45 select-none">
+        <div className="hidden md:block absolute bottom-[20%] right-[5%] w-40 h-40 md:w-56 md:h-56 opacity-45 pointer-events-none z-0 transform rotate-45 select-none">
           <img src={ilustrasi1} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
+        
         <div className="max-w-2xl mx-auto px-8">
-          <h2 className="text-4xl font-bold text-amber-500 mb-12 text-center border-b border-amber-900 pb-4">
+          {}
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#78A2CC] to-[#2F3E4E] bg-clip-text text-transparent mb-12 text-center border-b border-[#78A2CC] pb-4">
             Sejarah Singkat Gong
           </h2>
           
-          <div className="space-y-8 text-stone-300 text-lg leading-relaxed italic">
-            <p className="text-center font-sans tracking-widest text-amber-600">Gong ... Gong ... Gong ...</p>
+          {}
+          <div className="space-y-8 text-[#2F3E4E] text-lg leading-relaxed italic">
+            <p className="text-center font-sans tracking-widest text-[#78A2CC]">Gong ... Gong ... Gong ...</p>
             
-            <p className="not-italic text-xl">
-            Suara yang mungkin sudah tidak asing lagi didengar oleh masyarakat Nusantara, dari ujung Sumatera hingga tanah Papua.  Suara ini menyebar di seluruh budaya di Nusantara dalam keperluan ritual, agama, hingga rekreasi. 
+            <p className="not-italic text-xl text-[#2F3E4E]">
+              Suara yang mungkin sudah tidak asing lagi didengar oleh masyarakat Nusantara, dari ujung Sumatera hingga tanah Papua.  Suara ini menyebar di seluruh budaya di Nusantara dalam keperluan ritual, agama, hingga rekreasi. 
             </p>
 
-            <p className="text-center font-sans tracking-widest text-amber-600">Gong ... Gong ... Gong ...</p>
+            <p className="text-center font-sans tracking-widest text-[#78A2CC]">Gong ... Gong ... Gong ...</p>
 
-            <p className="not-italic text-xl">
-            Ini bukan sekedar suara, tetapi sebuah tanda bahwa di Bumi Nusantara ini terdapat sebuah alat yang sebenarnya adalah sebuah bukti bahwa kita sebagai masyarakat Nusantara mempunyai sebuah kesamaan yang mengingatkan kita bahwa walaupun kita berbeda, tetap saja ada suatu hal yang menyatukan kita semua. 
+            <p className="not-italic text-xl text-[#2F3E4E]">
+              Ini bukan sekedar suara, tetapi sebuah tanda bahwa di Bumi Nusantara ini terdapat sebuah alat yang sebenarnya adalah sebuah bukti bahwa kita sebagai masyarakat Nusantara mempunyai sebuah kesamaan yang mengingatkan kita bahwa walaupun kita berbeda, tetap saja ada suatu hal yang menyatukan kita semua. 
             </p>
 
-            <p className="not-italic">
-            Benda berbentuk bundar itu  secara umum merupakan sebuah alat musik yang terbuat dari logam atau perunggu yang dimainkan dengan cara dipukul. Gong secara umum mempunyai bentuk bundar dan dimainkan dengan cara memukul bagian tengah alat musik tersebut. Gong mempunyai beberapa variasi dalam bentuknya. Pada umumnya gong yang kita bisa temukan di seluruh Nusantara mempunyai sebuah jendolan di bagian tengahnya. Ada juga variasi gong yang tidak mempunyai jendolan di tengahnya dan jika mainkan mempunyai suara yang berbeda dibanding dengan gong yang memiliki jendolan tersebut. Terakhir, ada juga gong yang mempunyai bentuk seperti mangkuk (bowl gong) yang biasanya digunakan oleh umat Buddha. 
+            <p className="not-italic text-[#3F5568]">
+              Benda berbentuk bundar itu secara umum merupakan sebuah alat musik yang terbuat dari logam atau perunggu yang dimainkan dengan cara dipukul. Gong secara umum mempunyai bentuk bundar dan dimainkan dengan cara memukul bagian tengah alat musik tersebut. Gong mempunyai beberapa variasi dalam bentuknya. Pada umumnya gong yang kita bisa temukan di seluruh Nusantara mempunyai sebuah jendolan di bagian tengahnya. Ada juga variasi gong yang tidak mempunyai jendolan di tengahnya dan jika mainkan mempunyai suara yang berbeda dibanding dengan gong yang memiliki jendolan tersebut. Terakhir, ada juga gong yang mempunyai bentuk seperti mangkuk (bowl gong) yang biasanya digunakan oleh umat Buddha. 
             </p>
 
-            {/* <p className="not-italic bg-stone-900/50 p-6 rounded-lg border-l-4 border-amber-700"> */}
-            <p className="not-italic">
-            Secara ilmu etnomusikologi gong merupakan alat musik idiophone yang artinya alat musik tersebut mempunyai sumber bunyi yang asalnya dari getaran badannya. 
+            <p className="not-italic text-[#3F5568]">
+              Secara ilmu etnomusikologi gong merupakan alat musik idiophone yang artinya alat musik tersebut mempunyai sumber bunyi yang asalnya dari getaran badannya. 
             </p>
+
+            {}
             <div className="w-full space-y-1.5 py-1">
-              <div className="w-full h-56 md:h-64 overflow-hidden rounded-xl border border-stone-800/80 bg-stone-950">
+              <div className="w-full h-56 md:h-64 overflow-hidden rounded-xl border border-[#78A2CC]/60 bg-[#BFD4DB]">
                 <img 
                   src={sejarah1}
                   alt="Gong" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-[11px] text-stone-500 italic text-center font-serif">
+              <p className="text-[11px] text-[#4A647A] italic text-center font-serif">
                 Alat musik gong (14/05/2026). (Dok: Muhammad Zaki) 
               </p>
             </div>
-            <p className="not-italic">
+
+            <p className="not-italic text-[#3F5568]">
               Sebuah hipotesis dari seorang pengamat budaya mengatakan bahwa alat musik gong merupakan sebuah alat yang mempunyai akar sejarah dari Tiongkok. Ia juga mempunyai hipotesis yang mengatakan bahwa gong bisa menyebar ke seluruh Nusantara karena adanya pengaruh dari budaya Kerajaan Majapahit.
             </p>
+
             <div className="w-full space-y-1.5 py-1">
-              <div className="w-full h-56 md:h-64 overflow-hidden rounded-xl border border-stone-800/80 bg-stone-950">
+              <div className="w-full h-56 md:h-64 overflow-hidden rounded-xl border border-[#78A2CC]/60 bg-[#BFD4DB]">
                 <img 
                   src={sejarah2}
                   alt="Gong" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-[11px] text-stone-500 italic text-center font-serif">
+              <p className="text-[11px] text-[#4A647A] italic text-center font-serif">
                 Perbaikan alat musik gong (14/05/2026). (Dok: Muhammad Zaki) 
               </p>
             </div>
-            <p className="not-italic">
-              Walaupun merupakan alat musik yang terkesan terlihat sederhana, alat musik ini tidak boleh secara sembarang dimainkan. Dalam seni karawitan, alat musik gong itu mempunyai fungsi untuk memadai. Gong itu dianggap yang paling mudah untuk dimainkan karena dalam seni tersebut hanya dimainkan dengan memukul sekali. Biasanya jika seseorang ingin mempelajari gamelan dari awal-awal mereka harus memainkan gong terlebih dahulu.  Namun, walaupun gong itu dianggap paling mudah untuk dimainkan, dalam sajian kesenian karawitan seseorang tidak boleh sembarangan dalam memainkan gong, ini membuktikan bahwa gong memiliki peran yang penting dalam berbagai budaya yang ada di Nusantara. 
+
+            <p className="not-italic text-[#3F5568]">
+              Walaupun merupakan alat musik yang terkesan terlihat sederhana, alat musik ini tidak boleh secara sembarang dimainkan. Dalam seni karawitan, alat musik gong itu mempunyai fungsi untuk memadai. Gong itu dianggap yang paling mudah untuk dimainkan karena dalam seni tersebut hanya dimainkan dengan memukul sekali. Biasanya jika seseorang ingin mempelajari gamelan dari awal-awal mereka harus memainkan gong terlebih dahulu. Namun, walaupun gong itu dianggap paling mudah untuk dimainkan, dalam sajian kesenian karawitan seseorang tidak boleh sembarangan dalam memainkan gong, ini membuktikan bahwa gong memiliki peran yang penting dalam berbagai budaya yang ada di Nusantara. 
             </p>
           </div>
         </div>
       </section>
 
-        {/* <div className="text-center mb-10 px-4">
-          <h3 className="text-2xl font-sans text-stone-500 tracking-[0.4em] uppercase">Visualisasi</h3>
-        </div> */}
-      <section id="section-4" className="min-h-screen bg-stone-900 flex flex-col justify-center items-center py-12 relative">
+          {}
+      {}
+      <section id="section-4" className="min-h-screen bg-[#BFD4DB] flex flex-col justify-center items-center py-12 relative border-t border-[#78A2CC]/20">
         <div className="relative w-full max-w-6xl px-4 flex flex-col items-center">
           <div 
             ref={sliderRef}
@@ -374,18 +402,22 @@ const Landing = () => {
           >
             {sliderImages.map((item, index) => (
               <div key={index} className="flex-none w-full md:w-full snap-center px-4 md:px-0 flex flex-col items-center justify-between">
+                
+                {}
                 <div className="text-center w-full mb-3">
-                  <h4 className="text-amber-500 font-sans text-sm tracking-widest font-semibold uppercase">
+                  <h4 className="text-[#14263B] font-sans text-sm tracking-widest font-semibold uppercase">
                     {item.nama}
                   </h4>
                 </div>
 
+                {}
                 <div 
                   onClick={() => setActivePopupData(item)}
-                  className="h-full w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-stone-800 cursor-pointer hover:border-amber-500/50 transition-all group relative"
+                  className="h-full w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-[#A4C3D2]/20 cursor-pointer hover:border-[#78A2CC] hover:shadow-[0_0_25px_rgba(120,162,204,0.3)] transition-all group relative"
                 >
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                    <span className="text-amber-500 text-xs tracking-widest font-sans uppercase bg-stone-950/80 px-4 py-2 rounded-full border border-amber-500/30">
+                  {}
+                  <div className="absolute inset-0 bg-[#BFD4DB]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                    <span className="text-[#14263B] text-xs tracking-widest font-sans uppercase bg-[#AECBD6]/90 px-4 py-2 rounded-full border border-[#78A2CC]/40">
                       Klik Detail
                     </span>
                   </div>
@@ -397,8 +429,9 @@ const Landing = () => {
                   />
                 </div>
 
+                {}
                 <div className="text-center w-full mt-3">
-                  <p className="text-stone-400 font-serif text-sm italic tracking-wide">
+                  <p className="text-[#14263B] font-serif text-sm italic tracking-wide">
                     {item.budaya}
                   </p>
                 </div>
@@ -407,6 +440,7 @@ const Landing = () => {
             ))}
           </div>
 
+          {}
           <div className="flex md:hidden items-center space-x-6 mt-6">
             <button 
               onClick={() => {
@@ -414,14 +448,14 @@ const Landing = () => {
                   sliderRef.current.scrollBy({ left: -sliderRef.current.clientWidth, behavior: 'smooth' });
                 }
               }}
-              className="p-3 rounded-full bg-stone-800 border border-stone-700 text-amber-500 active:scale-95 transition-transform"
+              className="p-3 rounded-full bg-[#AECBD6] border border-[#78A2CC]/30 text-[#14263B] hover:text-[#BFD4DB] active:scale-95 transition-transform"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
-            <span className="text-stone-500 font-sans text-sm tracking-widest">Geser / Klik</span>
+            <span className="text-[#14263B] font-sans text-sm tracking-widest">Geser / Klik</span>
 
             <button 
               onClick={() => {
@@ -434,7 +468,7 @@ const Landing = () => {
                   }
                 }
               }}
-              className="p-3 rounded-full bg-stone-800 border border-stone-700 text-amber-500 active:scale-95 transition-transform"
+              className="p-3 rounded-full bg-[#AECBD6] border border-[#78A2CC]/30 text-[#14263B] hover:text-[#BFD4DB] active:scale-95 transition-transform"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -445,48 +479,59 @@ const Landing = () => {
       </section>
 
 
-      <section id="section-5" className="min-h-screen bg-stone-950 flex flex-col justify-center items-center py-24 px-4 border-t border-stone-900">
+      {}
+      {}
+      <section id="section-5" className="min-h-screen bg-[#AECBD6] flex flex-col justify-center items-center py-24 px-4 border-t border-[#78A2CC]/20">
+        
+        {}
         {!quizActive && !showResult && (
-          <div className="max-w-md w-full bg-stone-900/60 backdrop-blur-md border border-stone-800 p-8 rounded-3xl shadow-2xl text-center animate-fade-in">
-            <div className="w-16 h-16 bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center rounded-full mx-auto mb-6 text-2xl font-bold font-sans">
+          <div className="max-w-md w-full bg-[#BFD4DB]/80 backdrop-blur-md border border-[#A4C3D2]/20 p-8 rounded-3xl shadow-2xl text-center animate-fade-in">
+            {}
+            <div className="w-16 h-16 bg-[#78A2CC]/10 border border-[#14263B]/30 text-[#14263B] flex items-center justify-center rounded-full mx-auto mb-6 text-2xl font-bold font-sans">
               ?
             </div>
-            <h2 className="text-3xl font-bold text-amber-500 mb-2 tracking-wider">ASAH WAWASAN</h2>
-            <p className="text-stone-400 font-sans text-xs tracking-[0.2em] uppercase mb-6">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#14263B] to-[#18314A] bg-clip-text text-transparent mb-2 tracking-wider">
+              ASAH WAWASAN
+            </h2>
+            <p className="text-[#14263B] font-sans text-xs tracking-[0.2em] uppercase mb-6">
               Uji Pengetahuan Gong Nusantara
             </p>
-            <div className="w-full h-px bg-stone-800 mb-6"></div>
-            <p className="text-stone-300 font-sans text-sm leading-relaxed mb-8">
+            <div className="w-full h-px bg-[#A4C3D2]/20 mb-6"></div>
+            <p className="text-[#14263B] font-sans text-sm leading-relaxed mb-8">
               Apakah kamu sudah menyimak sejarah singkat di atas dengan baik? Mari uji ingatanmu melalui 10 pertanyaan seru seputar budaya gong.
             </p>
             
+            {}
             <button 
               onClick={() => setQuizActive(true)}
-              className="w-full px-6 py-4 bg-amber-600 hover:bg-amber-500 text-stone-950 font-sans uppercase text-xs tracking-widest rounded-full transition-all font-bold shadow-lg shadow-amber-600/20 active:scale-98 animate-pulse hover:animate-none"
+              className="w-full px-6 py-4 bg-[#78A2CC] hover:bg-[#88AED0] text-[#14263B] font-sans uppercase text-xs tracking-widest rounded-full transition-all font-bold shadow-lg shadow-[#78A2CC]/20 active:scale-98"
             >
               🚀 Ayo Mulai Quiz!
             </button>
           </div>
         )}
 
+        {}
         {quizActive && !showResult && (
-          <div className="max-w-xl w-full bg-stone-900/40 backdrop-blur-md border border-stone-800/80 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col">
+          <div className="max-w-xl w-full bg-[#BFD4DB]/60 backdrop-blur-md border border-[#A4C3D2]/20 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col">
             
-            <div className="flex justify-between items-center mb-4 font-sans text-xs tracking-wider text-stone-500">
-              <span className="text-amber-500 font-bold uppercase tracking-widest">Kuis Berjalan</span>
+            <div className="flex justify-between items-center mb-4 font-sans text-xs tracking-wider text-[#96B9D0]">
+              <span className="text-[#14263B] font-bold uppercase tracking-widest">Kuis Berjalan</span>
               <span>SOAL {currentQuestionIndex + 1} / {questions.length}</span>
             </div>
             
-            <div className="w-full h-1 bg-stone-800 rounded-full mb-8 overflow-hidden">
-              <div className="h-full bg-amber-500 transition-all duration-300" style={{ width: `${progressPercentage}%` }}></div>
+            {}
+            <div className="w-full h-1 bg-[#AECBD6] rounded-full mb-8 overflow-hidden">
+              <div className="h-full bg-[#14263B] transition-all duration-300" style={{ width: `${progressPercentage}%` }}></div>
             </div>
 
             <div className="min-h-[80px] mb-6">
-              <h2 className="text-xl md:text-2xl font-medium text-stone-100 leading-snug">
+              <h2 className="text-xl md:text-2xl font-medium text-[#14263B] leading-snug">
                 {questions[currentQuestionIndex].question}
               </h2>
             </div>
 
+            {}
             <div className="space-y-3 mb-8 font-sans">
               {questions[currentQuestionIndex].options.map((option, idx) => {
                 const isSelected = selectedAnswers[currentQuestionIndex] === option;
@@ -496,26 +541,27 @@ const Landing = () => {
                     onClick={() => handleOptionSelect(option)}
                     className={`w-full text-left p-4 rounded-xl border text-sm transition-all duration-200 flex items-center justify-between group
                       ${isSelected 
-                        ? 'bg-amber-600/10 border-amber-500 text-amber-400 font-semibold' 
-                        : 'bg-stone-950/40 border-stone-800 text-stone-400 hover:border-stone-700 hover:text-stone-200'
+                        ? 'bg-[#78A2CC]/10 border-[#78A2CC] text-[#14263B] font-semibold' 
+                        : 'bg-[#AECBD6]/40 border-[#A4C3D2]/10 text-[#14263B] hover:border-[#88AED0] hover:text-[#14263B]'
                       }`}
                   >
                     <span>{option}</span>
                     <div className={`w-4 h-4 rounded-full border flex items-center justify-center
-                      ${isSelected ? 'border-amber-500 bg-amber-500' : 'border-stone-700'}`}
+                      ${isSelected ? 'border-[#78A2CC] bg-[#78A2CC]' : 'border-[#A4C3D2]/30'}`}
                     >
-                      {isSelected && <div className="w-1.5 h-1.5 bg-stone-950 rounded-full"></div>}
+                      {isSelected && <div className="w-1.5 h-1.5 bg-[#BFD4DB] rounded-full"></div>}
                     </div>
                   </button>
                 );
               })}
             </div>
 
-            <div className="flex items-center justify-between font-sans border-t border-stone-800/60 pt-6">
+            {}
+            <div className="flex items-center justify-between font-sans border-t border-[#A4C3D2]/20 pt-6">
               <button
                 onClick={() => currentQuestionIndex > 0 && setCurrentQuestionIndex(currentQuestionIndex - 1)}
                 disabled={currentQuestionIndex === 0}
-                className={`px-4 py-2 rounded-full text-xs uppercase tracking-widest flex items-center space-x-1 ${currentQuestionIndex === 0 ? 'text-stone-700 cursor-not-allowed' : 'text-stone-400 bg-stone-800/40'}`}
+                className={`px-4 py-2 rounded-full text-xs uppercase tracking-widest flex items-center space-x-1 ${currentQuestionIndex === 0 ? 'text-[#14263B]/20 cursor-not-allowed' : 'text-[#14263B] bg-[#AECBD6]'}`}
               >
                 <span>Sebelumnya</span>
               </button>
@@ -524,7 +570,7 @@ const Landing = () => {
                 <button
                   onClick={() => selectedAnswers[currentQuestionIndex] && setCurrentQuestionIndex(currentQuestionIndex + 1)}
                   disabled={!selectedAnswers[currentQuestionIndex]}
-                  className={`px-5 py-2 rounded-full text-xs uppercase tracking-widest flex items-center space-x-1 font-bold ${selectedAnswers[currentQuestionIndex] ? 'bg-stone-800 text-amber-500' : 'bg-stone-900 text-stone-600 cursor-not-allowed'}`}
+                  className={`px-5 py-2 rounded-full text-xs uppercase tracking-widest flex items-center space-x-1 font-bold ${selectedAnswers[currentQuestionIndex] ? 'bg-[#78A2CC] text-[#14263B]' : 'bg-[#AECBD6] text-[#14263B]/30 cursor-not-allowed'}`}
                 >
                   <span>Lanjut</span>
                 </button>
@@ -532,7 +578,7 @@ const Landing = () => {
                 <button
                   onClick={handleSubmit}
                   disabled={Object.keys(selectedAnswers).length < questions.length}
-                  className={`px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold ${Object.keys(selectedAnswers).length === questions.length ? 'bg-amber-600 text-stone-950 hover:bg-amber-500' : 'bg-stone-900 text-stone-600 cursor-not-allowed'}`}
+                  className={`px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold ${Object.keys(selectedAnswers).length === questions.length ? 'bg-[#88AED0] text-[#BFD4DB] hover:bg-[#78A2CC]' : 'bg-[#AECBD6] text-[#14263B]/30 cursor-not-allowed'}`}
                 >
                   Kirim Jawaban
                 </button>
@@ -541,29 +587,31 @@ const Landing = () => {
           </div>
         )}
 
+        {}
         {showResult && (
-          <div className="max-w-2xl w-full bg-stone-900/60 backdrop-blur-md border border-stone-800 p-6 md:p-8 rounded-3xl shadow-2xl animate-fade-in">
+          <div className="max-w-2xl w-full bg-[#BFD4DB]/80 backdrop-blur-md border border-[#A4C3D2]/20 p-6 md:p-8 rounded-3xl shadow-2xl animate-fade-in">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-amber-500 mb-1">HASIL EVALUASI</h2>
-              <div className="inline-flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-amber-500/20 bg-stone-950/60 my-4">
-                <span className="text-4xl font-bold text-amber-500 font-sans">{score * 10}</span>
-                <span className="text-[10px] text-stone-500 font-sans tracking-wider uppercase">Skor</span>
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-[#14263B] to-[#78A2CC] bg-clip-text text-transparent mb-1">HASIL EVALUASI</h2>
+              <div className="inline-flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-[#78A2CC]/20 bg-[#AECBD6] my-4">
+                <span className="text-4xl font-bold text-[#14263B] font-sans">{score * 10}</span>
+                <span className="text-[10px] text-[#14263B] font-sans tracking-wider uppercase">Skor</span>
               </div>
-              <p className="text-stone-300">
-                Benar <span className="text-amber-400 font-bold font-sans">{score}</span> dari <span className="font-sans text-stone-400">{questions.length}</span> soal
+              <p className="text-[#14263B]">
+                Benar <span className="text-[#14263B] font-bold font-sans">{score}</span> dari <span className="font-sans text-[#14263B]">{questions.length}</span> soal
               </p>
             </div>
 
-            <div className="space-y-2 max-h-64 overflow-y-auto pr-2 mb-6 border border-stone-800/40 p-4 rounded-xl bg-stone-950/40 font-sans no-scrollbar">
+            {}
+            <div className="space-y-2 max-h-64 overflow-y-auto pr-2 mb-6 border border-[#A4C3D2]/20 p-4 rounded-xl bg-[#AECBD6]/40 font-sans no-scrollbar">
               {questions.map((q, index) => {
                 const isCorrect = selectedAnswers[index] === q.correctAnswer;
                 return (
-                  <div key={index} className="p-3 rounded-lg bg-stone-900/50 border border-stone-800 text-xs">
-                    <p className="font-serif text-sm text-stone-300 mb-1">{q.id}. {q.question}</p>
-                    <p className={isCorrect ? 'text-emerald-500' : 'text-rose-400'}>
+                  <div key={index} className="p-3 rounded-lg bg-[#BFD4DB]/50 border border-[#A4C3D2]/10 text-xs">
+                    <p className="font-serif text-sm text-[#14263B] mb-1">{q.id}. {q.question}</p>
+                    <p className={isCorrect ? 'text-[#14263B]' : 'text-[#14263B]'}>
                       Jawaban Anda: {selectedAnswers[index]} {isCorrect ? '✓' : '✗'}
                     </p>
-                    {!isCorrect && <p className="text-stone-500">Kunci: {q.correctAnswer}</p>}
+                    {!isCorrect && <p className="text-[#14263B]">Kunci: {q.correctAnswer}</p>}
                   </div>
                 );
               })}
@@ -577,30 +625,36 @@ const Landing = () => {
                 setScore(0);
                 setQuizActive(true); 
               }}
-              className="w-full px-6 py-3 bg-amber-600 hover:bg-amber-500 text-stone-950 font-sans uppercase text-xs tracking-widest rounded-full transition-all font-bold text-center"
+              className="w-full px-6 py-3 bg-[#78A2CC] hover:bg-[#88AED0] text-[#14263B] font-sans uppercase text-xs tracking-widest rounded-full transition-all font-bold text-center"
             >
               Coba Ulang Kuis
             </button>
           </div>
         )}
       </section>
-
-      <section id="section-6" className="min-h-screen bg-stone-900 text-stone-200 flex flex-col justify-center items-center py-24 px-4 border-t border-stone-950 relative overflow-hidden">
+      
+      {}
+      {}
+      <section id="section-6" className="min-h-screen bg-[#BFD4DB] text-[#14263B] flex flex-col justify-center items-center py-24 px-4 border-t border-[#78A2CC]/20 relative overflow-hidden">
         
-        <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -left-32 -top-32 w-96 h-96 bg-stone-500/5 rounded-full blur-3xl pointer-events-none" />
+        {}
+        <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-[#78A2CC]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -left-32 -top-32 w-96 h-96 bg-[#A4C3D2]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-3xl w-full flex flex-col items-center">
           
-          <span className="text-amber-500 font-sans text-xs tracking-[0.3em] uppercase font-bold mb-3 block text-center">
+          {}
+          <span className="text-[#14263B] font-sans text-xs tracking-[0.3em] uppercase font-bold mb-3 block text-center">
             Epilog & Kesimpulan
           </span>
           
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-100 text-center mb-12 tracking-wide leading-tight">
+          {}
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#14263B] text-center mb-12 tracking-wide leading-tight">
             Pentingnya Gong untuk Dilestarikan
           </h2>
 
-          <div className="space-y-6 text-stone-300 font-sans text-base leading-relaxed text-justify">
+          {}
+          <div className="space-y-6 text-[#14263B] font-sans text-base leading-relaxed text-justify">
             
             <p>
               Walaupun di mata orang awam ini hanya sekadar sebuah alat yang digunakan dalam kegiatan-kegiatan tertentu, 
@@ -608,12 +662,13 @@ const Landing = () => {
               sebuah makna yang dalam dan sejarah yang panjang.
             </p>
 
-            <blockquote className="border-l-4 border-amber-500 bg-stone-950/40 p-5 rounded-r-2xl my-8 font-serif italic text-stone-200 text-base relative">
-              <span className="absolute -top-4 -left-2 text-6xl text-amber-500/10 font-serif font-bold select-none">“</span>
+            {}
+            <blockquote className="border-l-4 border-[#78A2CC] bg-[#AECBD6]/60 p-5 rounded-r-2xl my-8 font-serif italic text-[#14263B] text-base relative">
+              <span className="absolute -top-4 -left-2 text-6xl text-[#14263B]/10 font-serif font-bold select-none">“</span>
               “Di sini ada satu hal yang menarik buat saya gong itu perannya tuh kalau dilihat sedikit ya cuma ‘gong, gong’ 
               gitu doang, tapi kenapa sangat dibutuhkan dan selalu ada di apapun. Nah ini menurut saya menjadi menarik ya, 
               kenapa karena saya pikir mungkin ya tadi gong itu tidak hanya sebagai material,”
-              <cite className="block font-sans not-italic text-xs text-stone-500 mt-3 tracking-wider uppercase font-semibold">
+              <cite className="block font-sans not-italic text-xs text-[#14263B] mt-3 tracking-wider uppercase font-semibold">
                 — Pak Teddy Hendiawan (Dosen Film & Pengamat Budaya UMN, 07/04/2026)
               </cite>
             </blockquote>
@@ -627,9 +682,8 @@ const Landing = () => {
 
             <p>
               Dalam setiap budaya di Nusantara, gong digunakan dalam berbagai macam hal, seperti kegiatan ritual keagamaan, 
-              sebagai alat musik untuk kegiatan rekreasi, sebagai alat untuk berkomunikasi, dan masih banyak lagi. Sebuah alat 
-              musik yang pada pandangan pertama hanya terlihat sebagai logam berbentuk bundar, rupanya mempunyai fungsi yang 
-              sangat kaya dan digunakan secara luas di Nusantara.
+              as a means of rekreasi, alat komunikasi, and masih banyak lagi. Sebuah alat musik yang pada pandangan pertama 
+              hanya terlihat sebagai logam berbentuk bundar, rupanya mempunyai fungsi yang sangat kaya dan digunakan secara luas di Nusantara.
             </p>
 
             <p>
@@ -652,35 +706,41 @@ const Landing = () => {
               budaya di Nusantara, agar ilmu-ilmu leluhur kita akan tetap dilestarikan sampai bumi menutup mata.
             </p>
 
-            <blockquote className="border-l-4 border-amber-600 bg-stone-950/40 p-5 rounded-r-2xl my-8 font-serif italic text-stone-200 text-base relative">
-              <span className="absolute -top-4 -left-2 text-6xl text-amber-600/10 font-serif font-bold select-none">“</span>
+            {}
+            <blockquote className="border-l-4 border-[#88AED0] bg-[#AECBD6]/60 p-5 rounded-r-2xl my-8 font-serif italic text-[#14263B] text-base relative">
+              <span className="absolute -top-4 -left-2 text-6xl text-[#14263B]/10 font-serif font-bold select-none">“</span>
               “Kita harus kembali ke akar tradisi apa, biar tahu kita tuh dari mana, nah agar kita bisa bertahan, kita tentu 
               harus melakukan tadi reinterpretasi ulang, gitu jangan takut, karena budaya itu dinamis,”
-              <cite className="block font-sans not-italic text-xs text-stone-500 mt-3 tracking-wider uppercase font-semibold">
+              <cite className="block font-sans not-italic text-xs text-[#14263B] mt-3 tracking-wider uppercase font-semibold">
                 — Pak Teddy Hendiawan (Dosen Film & Pengamat Budaya UMN, 07/04/2026)
               </cite>
             </blockquote>
 
           </div>
 
-          <div className="w-full h-px bg-stone-800 my-12" />
+          <div className="w-full h-px bg-[#A4C3D2]/20 my-12" />
           
+          {}
           <div className="text-center space-y-4">
-            <h3 className="font-serif text-2xl md:text-3xl tracking-[0.3em] text-amber-500 font-bold uppercase animate-pulse">
+            <h3 className="font-serif text-2xl md:text-3xl tracking-[0.3em] bg-gradient-to-r from-[#14263B] via-[#14263B] to-[#78A2CC] bg-clip-text text-transparent font-bold uppercase animate-pulse">
               Gong  … Gong … Gong …  Gong
             </h3>
-            <p className="font-sans text-sm text-stone-400 max-w-md mx-auto leading-relaxed tracking-wide">
+            <p className="font-sans text-sm text-[#14263B] max-w-md mx-auto leading-relaxed tracking-wide">
               Gong sudah digaungkan. Saatnya anak bangsa untuk mengambil bagian sebagai pelestari budaya Bumi Nusantara.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="section-7" className="min-h-screen bg-stone-950 text-stone-200 flex flex-col justify-center items-center py-24 px-4 border-t border-stone-900 relative overflow-hidden">
+
+      {}
+      {}
+      <section id="section-7" className="min-h-screen bg-[#AECBD6] text-[#14263B] flex flex-col justify-center items-center py-24 px-4 border-t border-[#78A2CC]/20 relative overflow-hidden">
         
         <div className="max-w-3xl w-full flex flex-col items-center">
           
-          <div className="w-full h-[55vh] md:h-[60vh] overflow-hidden rounded-2xl border-4 border-stone-800 shadow-2xl bg-stone-900 mb-4">
+          {}
+          <div className="w-full h-[55vh] md:h-[60vh] overflow-hidden rounded-2xl border-4 border-[#A4C3D2]/30 shadow-2xl bg-[#BFD4DB] mb-4">
             <img 
               src={foto1}
               alt="Pak Krisna memperbaiki gong" 
@@ -688,14 +748,16 @@ const Landing = () => {
             />
           </div>
 
+          {}
           <div className="text-center w-full max-w-2xl px-4 mb-20">
-            <p className="text-sm md:text-base text-stone-400 font-serif italic tracking-wide leading-relaxed">
+            <p className="text-sm md:text-base text-[#14263B] font-serif italic tracking-wide leading-relaxed">
               Pak Krisna sedang melakukan perbaikan alat musik gong (14/05/2026). (Dok: Muhammad Zaki)
             </p>
           </div>
 
-          <div className="text-center w-full py-6 border-y border-stone-900/60 bg-stone-900/10 backdrop-blur-sm rounded-3xl">
-            <h3 className="font-serif text-2xl md:text-4xl tracking-[0.2em] text-amber-500 font-bold uppercase animate-pulse">
+          {}
+          <div className="text-center w-full py-6 border-y border-[#A4C3D2]/20 bg-[#BFD4DB]/40 backdrop-blur-sm rounded-3xl">
+            <h3 className="font-serif text-2xl md:text-4xl tracking-[0.2em] text-[#14263B] font-bold uppercase animate-pulse">
               “Gong…… Gong ……… Gong ……..”
             </h3>
           </div>
@@ -703,131 +765,154 @@ const Landing = () => {
         </div>
       </section>
 
-      <section id="section-8" className="bg-stone-950 py-20 px-4 border-t border-stone-900 flex flex-col justify-center items-center relative overflow-hidden">
-        
-        <div className="flex flex-col items-center space-y-4 group">
-          
-          <a 
-            href="/biografi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative flex flex-col items-center"
-          >
-            <div className="w-24 h-24 md:w-28 md:h-28 overflow-hidden rounded-full border-2 border-stone-800 bg-stone-900/50 p-2 shadow-xl group-hover:border-amber-500/60 transition-all duration-300 group-hover:scale-105 group-active:scale-95">
-              <img 
-                src={zaki}
-                alt="Mini Zaki" 
-                className="w-full h-full object-contain pointer-events-none"
-              />
-            </div>
-
-            <span className="mt-4 px-4 py-1.5 bg-stone-900 border border-stone-800 text-stone-400 group-hover:text-amber-500 group-hover:border-amber-500/30 text-[11px] uppercase tracking-widest font-sans font-bold rounded-full transition-all duration-300 shadow-md animate-bounce group-hover:animate-none">
-              👉 Klik Aku
-            </span>
-          </a>
-
-        </div>
-
-        <div className="mt-16 text-[10px] text-stone-600 font-sans tracking-widest uppercase">
-          © 2026 Dengungan Nusantara. All Rights Reserved.
-        </div>
-        
-      </section>
-
-      {activePopupData && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          
-          <div 
-            onClick={() => setActivePopupData(null)}
-            className="absolute inset-0 bg-stone-950/85 backdrop-blur-sm transition-opacity duration-300"
-          />
-
-          <div className="relative w-full max-w-xl bg-stone-900 border border-stone-800 p-6 md:p-8 rounded-3xl shadow-2xl z-10 max-h-[85vh] overflow-y-auto no-scrollbar font-sans text-left">
-            
-            <button 
-              onClick={() => setActivePopupData(null)}
-              className="absolute top-4 right-4 text-stone-500 hover:text-stone-300 p-2 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <div className="text-center mb-4">
-              <span className="text-amber-500 text-xs tracking-[0.2em] uppercase font-bold">
-                {activePopupData.budaya}
-              </span>
-              <h3 className="text-2xl font-serif font-bold text-stone-100 mt-1">
-                {activePopupData.popupData.judul}
-              </h3>
-            </div>
-            <div className="w-full h-px bg-stone-800 mb-6"></div>
-
-            <div className="space-y-5">
-              {activePopupData.popupData.konten.map((item, index) => {
-                
-                if (item.type === "teks") {
-                  return (
-                    <p key={index} className="text-stone-300 text-sm leading-relaxed text-justify font-sans">
-                      {item.value}
-                    </p>
-                  );
-                }
-
-                if (item.type === "gambar") {
-                  return (
-                    <div key={index} className="w-full space-y-1.5 py-1">
-                      <div className="w-full h-56 md:h-64 overflow-hidden rounded-xl border border-stone-800/80 bg-stone-950">
-                        <img 
-                          src={item.value} 
-                          alt={item.caption || "Detail"} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      {item.caption && (
-                        <p className="text-[11px] text-stone-500 italic text-center font-serif">
-                          {item.caption}
-                        </p>
-                      )}
-                    </div>
-                  );
-                }
-
-                if (item.type === "youtube") {
-                  return (
-                    <div key={index} className="w-full py-2">
-                      <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-stone-800/80 bg-stone-950 shadow-inner">
-                        <iframe
-                          className="absolute top-0 left-0 w-full h-full"
-                          src={`https://www.youtube.com/embed/${item.value}`}
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </div>
-                  );
-                }
-
-                return null;
-              })}
-            </div>
-
-            <div className="flex justify-center mt-8">
-              <button
-                onClick={() => setActivePopupData(null)}
-                className="px-8 py-2 bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs uppercase tracking-widest rounded-full transition-all border border-stone-700/50"
-              >
-                Tutup
-              </button>
-            </div>
-            
+    <section id="section-8" className="bg-[#BFD4DB] py-20 px-4 border-t border-[#78A2CC]/20 flex flex-col justify-center items-center relative overflow-hidden">
+      <div className="flex flex-col items-center space-y-4 group">
+        <a 
+          href="/biografi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative flex flex-col items-center"
+        >
+          <div className="w-24 h-24 md:w-28 md:h-28 overflow-hidden rounded-full border-2 border-[#A4C3D2]/30 bg-[#AECBD6]/50 p-2 shadow-xl group-hover:border-[#78A2CC] transition-all duration-300 group-hover:scale-105 group-active:scale-95 group-hover:shadow-[0_0_20px_rgba(120,162,204,0.2)]">
+            <img 
+              src={zaki}
+              alt="Mini Zaki" 
+              className="w-full h-full object-contain pointer-events-none"
+            />
           </div>
+          <span className="mt-4 px-4 py-1.5 bg-[#AECBD6] border border-[#A4C3D2]/20 text-[#14263B] group-hover:text-[#14263B] group-hover:border-[#78A2CC]/40 text-[11px] uppercase tracking-widest font-sans font-bold rounded-full transition-all duration-300 shadow-md animate-bounce group-hover:animate-none">
+            👉 Klik Aku
+          </span>
+        </a>
+      </div>
+      <div className="mt-16 text-[10px] text-[#14263B]/40 font-sans tracking-widest uppercase">
+        © 2026 Dengungan Nusantara. All Rights Reserved.
+      </div>
+    </section>
+
+
+    {}
+    {}
+    {}
+    {activePopupData && (
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        {}
+        <div 
+          onClick={() => setActivePopupData(null)}
+          className="absolute inset-0 bg-[#BFD4DB]/90 backdrop-blur-sm transition-opacity duration-300"
+        />
+        
+        {}
+        <div className="relative w-full max-w-xl bg-[#AECBD6] border border-[#A4C3D2]/20 p-6 md:p-8 rounded-3xl shadow-2xl z-10 max-h-[85vh] overflow-y-auto no-scrollbar font-sans text-left">
+          
+          {}
+          <button 
+            onClick={() => setActivePopupData(null)}
+            className="absolute top-4 right-4 text-[#14263B] hover:text-[#14263B] p-2 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          {}
+          <div className="text-center mb-4">
+            <span className="text-[#78A2CC] text-xs tracking-[0.2em] uppercase font-bold">
+              {activePopupData.budaya}
+            </span>
+            <h3 className="text-2xl font-serif font-bold text-[#14263B] mt-1">
+              {activePopupData.popupData.judul}
+            </h3>
+          </div>
+          <div className="w-full h-px bg-[#A4C3D2]/10 mb-6"></div>
+          
+          {}
+          <div className="space-y-5">
+            {activePopupData.popupData.konten.map((item, index) => {
+              
+              if (item.type === "teks") {
+                return (
+                  <p key={index} className="text-[#14263B] text-sm leading-relaxed text-justify font-sans">
+                    {item.value}
+                  </p>
+                );
+              }
+              
+              if (item.type === "gambar") {
+                return (
+                  <div key={index} className="w-full space-y-1.5 py-1">
+                    <div className="w-full h-56 md:h-64 overflow-hidden rounded-xl border border-[#A4C3D2]/20 bg-[#BFD4DB]">
+                      <img 
+                        src={item.value} 
+                        alt={item.caption || "Detail"} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {item.caption && (
+                      <p className="text-[11px] text-[#14263B] italic text-center font-serif">
+                        {item.caption}
+                      </p>
+                    )}
+                  </div>
+                );
+              }
+              
+              if (item.type === "infografis") {
+                return (
+                  <div key={index} className="w-full space-y-2 py-2">
+                    <div className="w-full overflow-hidden rounded-2xl border border-[#A4C3D2]/20 bg-[#BFD4DB] shadow-inner">
+                      <img 
+                        src={item.value} 
+                        alt={item.caption || "Infografis Full"} 
+                        className="w-full h-auto object-contain block mx-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                    {item.caption && (
+                      <p className="text-[11px] text-[#14263B] italic text-center font-serif">
+                        {item.caption}
+                      </p>
+                    )}
+                  </div>
+                );
+              }
+              
+              if (item.type === "youtube") {
+                return (
+                  <div key={index} className="w-full py-2">
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-[#A4C3D2]/20 bg-[#BFD4DB] shadow-inner">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src={`https://www.youtube.com/embed/${item.value}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                );
+              }
+
+              return null;
+            })}
+          </div>
+
+          {}
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setActivePopupData(null)}
+              className="px-8 py-2 bg-[#BFD4DB] hover:bg-[#78A2CC] text-[#14263B] hover:text-[#BFD4DB] text-xs uppercase tracking-widest rounded-full transition-all border border-[#78A2CC]/30 font-semibold"
+            >
+              Tutup
+            </button>
+          </div>
+          
         </div>
-      )}
-    </div>
-  );
+      </div>
+    )}
+  </div>
+);
 };
 
 export default Landing;
