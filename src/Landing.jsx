@@ -232,35 +232,34 @@ const Landing = () => {
       <Navbar scrollToSection={scrollToSection} />
 
       {}
-      <section 
-        id="section-1"
-        className="relative h-screen w-full flex flex-col items-center justify-center bg-fixed bg-center bg-cover"
-        style={{
-          
-          backgroundImage: `linear-gradient(to bottom, rgba(52, 73, 121, 0.6), #BFD4DB), url(${foto15})`        
-        }}
-      >
-        <div className="text-center animate-fade-in px-4">
-          {}
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-4 drop-shadow-2xl bg-gradient-to-r from-[#2F3E4E] via-[#2F3E4E] to-[#78A2CC] bg-clip-text text-transparent">
-            DENGUNGAN NUSANTARA
-          </h1>
-          {}
-          <p className="text-xl md:text-2xl text-[#4A647A] font-light tracking-[0.3em] uppercase">
-            Budaya Alat Musik Gong yang Terdapat di Nusantara
-          </p>
+<section id="section-1" className="w-full flex flex-col">
+        <div className="w-full h-screen overflow-hidden">
+          <img 
+            src={foto15} 
+            alt="Hero Gong" 
+            className="w-full h-full object-cover object-center"
+          />
         </div>
 
-        {}
-        <button 
-          onClick={() => scrollToSection('section-2')}
-          className="absolute bottom-20 animate-bounce flex flex-col items-center text-[#2F3E4E] hover:text-[#2F3E4E] transition-colors"
-        >
-          <span className="text-xs uppercase tracking-widest mb-2 font-sans">Scroll</span>
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </button>
+        <div className="w-full min-h-screen flex flex-col items-center justify-center py-20 px-4 text-center bg-[#BFD4DB]">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-4 drop-shadow-sm bg-gradient-to-r from-[#2F3E4E] via-[#2F3E4E] to-[#537391] bg-clip-text text-transparent">
+            DENGUNGAN NUSANTARA
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-[#4A647A] font-light tracking-[0.3em] uppercase mb-16">
+            Budaya Alat Musik Gong yang Terdapat di Nusantara
+          </p>
+
+          <button 
+            onClick={() => scrollToSection('section-2')}
+            className="animate-bounce flex flex-col items-center text-[#2F3E4E] hover:text-[#78A2CC] transition-colors group"
+          >
+            <span className="text-xs uppercase tracking-widest mb-2 font-sans font-semibold">Scroll Ke Konten</span>
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </button>
+        </div>
       </section>
 
       {}
@@ -272,10 +271,10 @@ const Landing = () => {
           backgroundImage: `linear-gradient(rgba(18, 24, 38, 0.92), rgba(18, 24, 38, 0.92)), url('https://images.unsplash.com/photo-1571244856003-0d53cb059fc5?q=80&w=1600')`
         }}
       >
-        <div className="hidden md:block absolute top-[15%] left-[5%] w-40 h-40 md:w-56 md:h-56 opacity-50 pointer-events-none z-0 transform -rotate-12 select-none filter drop-shadow-[0_0_15px_rgba(152,150,187,0.3)]">
+        <div className="hidden md:block absolute top-[15%] left-[5%] w-40 h-40 md:w-56 md:h-56 pointer-events-none z-0 transform -rotate-12 select-none filter drop-shadow-[0_0_15px_rgba(152,150,187,0.3)]">
           <img src={ilustrasi1} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
-        <div className="hidden md:block absolute bottom-[5%] right-[5%] w-40 h-40 md:w-56 md:h-56 opacity-45 pointer-events-none z-0 transform rotate-45 select-none filter drop-shadow-[0_0_15px_rgba(152,150,187,0.3)]">
+        <div className="hidden md:block absolute bottom-[5%] right-[5%] w-40 h-40 md:w-56 md:h-56 pointer-events-none z-0 transform rotate-45 select-none filter drop-shadow-[0_0_15px_rgba(152,150,187,0.3)]">
           <img src={ilustrasi2} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
         
@@ -318,16 +317,16 @@ const Landing = () => {
       {}
       {}
       <section id="section-3" className="min-h-screen bg-[#AECBD6] relative overflow-hidden py-16">
-        <div className="hidden md:block absolute top-[30%] left-[5%] w-40 h-40 md:w-56 md:h-56 opacity-50 pointer-events-none z-0 transform -rotate-12 select-none">
+        <div className="hidden md:block absolute top-[30%] left-[5%] w-40 h-40 md:w-56 md:h-56 pointer-events-none z-0 transform -rotate-12 select-none">
           <img src={ilustrasi3} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
-        <div className="hidden md:block absolute bottom-[20%] right-[5%] w-40 h-40 md:w-56 md:h-56 opacity-45 pointer-events-none z-0 transform rotate-45 select-none">
+        <div className="hidden md:block absolute bottom-[20%] right-[5%] w-40 h-40 md:w-56 md:h-56 pointer-events-none z-0 transform rotate-45 select-none">
           <img src={ilustrasi1} alt="Dekorasi Maskot" className="w-full h-full object-contain" />
         </div>
         
         <div className="max-w-2xl mx-auto px-8">
           {}
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#78A2CC] to-[#2F3E4E] bg-clip-text text-transparent mb-12 text-center border-b border-[#78A2CC] pb-4">
+          <h2 className="text-4xl font-bold bg-gradient-to-r text-[#78A2CC] bg-clip-text text-transparent mb-12 text-center border-b border-[#78A2CC] pb-4">
             Sejarah Singkat Gong
           </h2>
           
