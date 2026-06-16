@@ -728,6 +728,17 @@ const Landing = () => {
             <p className="font-sans text-sm text-[#14263B] max-w-md mx-auto leading-relaxed tracking-wide">
               Gong sudah digaungkan. Saatnya anak bangsa untuk mengambil bagian sebagai pelestari budaya Bumi Nusantara.
             </p>
+
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-[#A4C3D2]/20 bg-[#BFD4DB] shadow-inner">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src={`https://www.youtube.com/embed/pmEiNRfIRYw`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+               ></iframe>
+            </div>
           </div>
         </div>
       </section>
