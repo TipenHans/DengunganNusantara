@@ -10,7 +10,7 @@ const Navbar = ({ scrollToSection }) => {
   ];
 
   const secondaryMenus = [
-    { id: 'section-4', label: 'Galeri' },
+    { id: 'section-4', label: 'Pembuatan Gong' },
     { id: 'section-5', label: 'Quiz' },
     { id: 'section-6', label: 'Kesimpulan' },
     { id: 'section-8', label: 'Profil' },
