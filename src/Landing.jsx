@@ -38,6 +38,8 @@ import zaki from "./assets/gambarZaki.png";
 
 import infografis from "./assets/Infografis Alat Musik Gong.png";
 
+import suaraGong from "./assets/audio gong.mp3"
+
 const Landing = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -69,7 +71,7 @@ const Landing = () => {
     {
       src: maskot1,
       nama: "Asep",
-      budaya: "Sunda",
+      budaya: "Pembuat Gong",
       popupData: {
         judul: "Sang Penjaga Kebudayaan Leluhur: Gong Factory di Bogor",
         konten: [
@@ -226,13 +228,37 @@ const Landing = () => {
 
   const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
 
+  useEffect(() => {
+      const bgMusic = new Audio(suaraGong);
+      bgMusic.loop = true;
+
+      const playMusic = () => {
+        bgMusic.play().catch(() => {
+          console.log("Autoplay ditahan browser, menunggu klik pengguna.");
+        });
+      };
+      playMusic();
+
+      const handleInteraction = () => {
+        bgMusic.play();
+        document.removeEventListener('click', handleInteraction);
+      };
+
+      document.addEventListener('click', handleInteraction);
+
+      return () => {
+        bgMusic.pause();
+        document.removeEventListener('click', handleInteraction);
+      };
+    }, []);
+
   return (
     
     <div className="bg-[#BFD4DB] text-[#2F3E4E] font-serif overflow-x-hidden">
       <Navbar scrollToSection={scrollToSection} />
 
       {}
-<section id="section-1" className="w-full flex flex-col">
+      <section id="section-1" className="w-full flex flex-col">
         <div className="w-full h-screen overflow-hidden">
           <img 
             src={foto15} 
@@ -393,92 +419,117 @@ const Landing = () => {
           {}
       {}
       <section id="section-4" className="min-h-screen bg-[#BFD4DB] flex flex-col justify-center items-center py-12 relative border-t border-[#78A2CC]/20">
-        <div className="relative w-full max-w-6xl px-4 flex flex-col items-center">
-          <div 
-            ref={sliderRef}
-            className="flex md:grid md:grid-cols-4 w-full overflow-x-auto md:overflow-x-visible snap-x snap-mandatory no-scrollbar pb-6 gap-0 md:gap-6"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {sliderImages.map((item, index) => (
-              <div key={index} className="flex-none w-full md:w-full snap-center px-4 md:px-0 flex flex-col items-center justify-between">
-                
-                {}
-                <div className="text-center w-full mb-3">
-                  <h4 className="text-[#14263B] font-sans text-sm tracking-widest font-semibold uppercase">
-                    {item.nama}
-                  </h4>
-                </div>
+        <div className="relative w-full max-w-3xl px-4 flex flex-col items-center gap-8">
+          
+          {sliderImages.length > 0 && (
+            <div className="w-full max-w-xs flex flex-col items-center">
 
-                {}
-                <div 
-                  onClick={() => setActivePopupData(item)}
-                  className="h-full w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-[#A4C3D2]/20 cursor-pointer hover:border-[#78A2CC] hover:shadow-[0_0_25px_rgba(120,162,204,0.3)] transition-all group relative"
-                >
-                  {}
-                  <div className="absolute inset-0 bg-[#BFD4DB]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-                    <span className="text-[#14263B] text-xs tracking-widest font-sans uppercase bg-[#AECBD6]/90 px-4 py-2 rounded-full border border-[#78A2CC]/40">
-                      Klik Detail
-                    </span>
+              <div 
+                onClick={() => setActivePopupData(sliderImages[0])}
+                className="h-full w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-[#A4C3D2]/20 cursor-pointer hover:border-[#78A2CC] hover:shadow-[0_0_25px_rgba(120,162,204,0.3)] transition-all group relative"
+              >
+                <div className="absolute inset-0 bg-[#BFD4DB]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                  <span className="text-[#14263B] text-xs tracking-widest font-sans uppercase bg-[#AECBD6]/90 px-4 py-2 rounded-full border border-[#78A2CC]/40">
+                    Klik Detail
+                  </span>
+                </div>
+                <img 
+                  src={sliderImages[0].src} 
+                  alt="Pembuat Gong" 
+                  className="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="text-center w-full mt-3">
+                <p className="text-[#14263B] font-serif text-sm italic tracking-wide">
+                  {sliderImages[0].budaya}
+                </p>
+              </div>
+            </div>
+          )}
+
+          <div className="w-24 h-[2px] bg-[#78A2CC]/30 rounded-full md:block hidden"></div>
+
+          <div className="w-full flex flex-col items-center">
+            <div 
+              ref={sliderRef}
+              className="flex md:grid md:grid-cols-3 w-full overflow-x-auto md:overflow-x-visible snap-x snap-mandatory no-scrollbar pb-6 gap-0 md:gap-6"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {sliderImages.slice(1).map((item, index) => (
+                <div key={index} className="flex-none w-full md:w-full snap-center px-4 md:px-0 flex flex-col items-center justify-between">
+                  
+                  <div className="text-center w-full mb-3">
+                    <h4 className="text-[#14263B] font-sans text-sm tracking-widest font-semibold uppercase">
+                      {item.nama}
+                    </h4>
                   </div>
 
-                  <img 
-                    src={item.src} 
-                    alt={item.nama} 
-                    className="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <div 
+                    onClick={() => setActivePopupData(item)}
+                    className="h-full w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-[#A4C3D2]/20 cursor-pointer hover:border-[#78A2CC] hover:shadow-[0_0_25px_rgba(120,162,204,0.3)] transition-all group relative"
+                  >
+                    <div className="absolute inset-0 bg-[#BFD4DB]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                      <span className="text-[#14263B] text-xs tracking-widest font-sans uppercase bg-[#AECBD6]/90 px-4 py-2 rounded-full border border-[#78A2CC]/40">
+                        Klik Detail
+                      </span>
+                    </div>
+                    <img 
+                      src={item.src} 
+                      alt={item.nama} 
+                      className="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
+                  <div className="text-center w-full mt-3">
+                    <p className="text-[#14263B] font-serif text-sm italic tracking-wide">
+                      {item.budaya}
+                    </p>
+                  </div>
+
                 </div>
+              ))}
+            </div>
 
-                {}
-                <div className="text-center w-full mt-3">
-                  <p className="text-[#14263B] font-serif text-sm italic tracking-wide">
-                    {item.budaya}
-                  </p>
-                </div>
-
-              </div>
-            ))}
-          </div>
-
-          {}
-          <div className="flex md:hidden items-center space-x-6 mt-6">
-            <button 
-              onClick={() => {
-                if (sliderRef.current) {
-                  sliderRef.current.scrollBy({ left: -sliderRef.current.clientWidth, behavior: 'smooth' });
-                }
-              }}
-              className="p-3 rounded-full bg-[#AECBD6] border border-[#78A2CC]/30 text-[#14263B] hover:text-[#BFD4DB] active:scale-95 transition-transform"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            <span className="text-[#14263B] font-sans text-sm tracking-widest">Geser / Klik</span>
-
-            <button 
-              onClick={() => {
-                if (sliderRef.current) {
-                  const maxScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
-                  if (sliderRef.current.scrollLeft >= maxScroll - 10) {
-                    sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-                  } else {
-                    sliderRef.current.scrollBy({ left: sliderRef.current.clientWidth, behavior: 'smooth' });
+            <div className="flex md:hidden items-center space-x-6 mt-6">
+              <button 
+                onClick={() => {
+                  if (sliderRef.current) {
+                    sliderRef.current.scrollBy({ left: -sliderRef.current.clientWidth, behavior: 'smooth' });
                   }
-                }
-              }}
-              className="p-3 rounded-full bg-[#AECBD6] border border-[#78A2CC]/30 text-[#14263B] hover:text-[#BFD4DB] active:scale-95 transition-transform"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+                }}
+                className="p-3 rounded-full bg-[#AECBD6] border border-[#78A2CC]/30 text-[#14263B] hover:text-[#BFD4DB] active:scale-95 transition-transform"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <span className="text-[#14263B] font-sans text-sm tracking-widest">Geser / Klik</span>
+
+              <button 
+                onClick={() => {
+                  if (sliderRef.current) {
+                    const maxScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+                    if (sliderRef.current.scrollLeft >= maxScroll - 10) {
+                      sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                      sliderRef.current.scrollBy({ left: sliderRef.current.clientWidth, behavior: 'smooth' });
+                    }
+                  }
+                }}
+                className="p-3 rounded-full bg-[#AECBD6] border border-[#78A2CC]/30 text-[#14263B] hover:text-[#BFD4DB] active:scale-95 transition-transform"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
+
         </div>
       </section>
 
-
-      {}
       {}
       <section id="section-5" className="min-h-screen bg-[#AECBD6] flex flex-col justify-center items-center py-24 px-4 border-t border-[#78A2CC]/20">
         
@@ -640,13 +691,7 @@ const Landing = () => {
         <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-[#78A2CC]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -left-32 -top-32 w-96 h-96 bg-[#A4C3D2]/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-3xl w-full flex flex-col items-center">
-          
-          {}
-          <span className="text-[#14263B] font-sans text-xs tracking-[0.3em] uppercase font-bold mb-3 block text-center">
-            Epilog & Kesimpulan
-          </span>
-          
+        <div className="max-w-3xl w-full flex flex-col items-center">          
           {}
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#14263B] text-center mb-12 tracking-wide leading-tight">
             Pentingnya Gong untuk Dilestarikan
