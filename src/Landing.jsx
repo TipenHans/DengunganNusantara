@@ -229,28 +229,42 @@ const Landing = () => {
   const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
 
   useEffect(() => {
-      const bgMusic = new Audio(suaraGong);
-      bgMusic.loop = true;
+    const bgMusic = new Audio(suaraGong);
+    
+    bgMusic.loop = false; 
 
-      const playMusic = () => {
-        bgMusic.play().catch(() => {
-          console.log("Autoplay ditahan browser, menunggu klik pengguna.");
-        });
-      };
-      playMusic();
+    const maksimalPutar = 5; 
+    let jumlahPutarsaatIni = 1;
 
-      const handleInteraction = () => {
-        bgMusic.play();
-        document.removeEventListener('click', handleInteraction);
-      };
+    const handleAudioEnded = () => {
+      if (jumlahPutarsaatIni < maksimalPutar) {
+        jumlahPutarsaatIni++;
+        bgMusic.play().catch(() => {});
+      }
+    };
 
-      document.addEventListener('click', handleInteraction);
+    bgMusic.addEventListener('ended', handleAudioEnded);
 
-      return () => {
-        bgMusic.pause();
-        document.removeEventListener('click', handleInteraction);
-      };
-    }, []);
+    const playMusic = () => {
+      bgMusic.play().catch(() => {
+        console.log("Autoplay ditahan browser, menunggu klik pengguna.");
+      });
+    };
+    playMusic();
+
+    const handleInteraction = () => {
+      bgMusic.play();
+      document.removeEventListener('click', handleInteraction);
+    };
+
+    document.addEventListener('click', handleInteraction);
+
+    return () => {
+      bgMusic.pause();
+      bgMusic.removeEventListener('ended', handleAudioEnded);
+      document.removeEventListener('click', handleInteraction);
+    };
+  }, []);
 
   return (
     
