@@ -11,8 +11,9 @@ const Navbar = ({ scrollToSection }) => {
 
   const secondaryMenus = [
     { id: 'section-4', label: 'Pembuatan Gong' },
+    { id: 'apa-kata-mereka', label: 'Apa kata mereka?' },
     { id: 'section-5', label: 'Quiz' },
-    { id: 'section-6', label: 'Kesimpulan' },
+    { id: 'section-6', label: 'Apakah perlu dilestarikan?' },
     { id: 'section-8', label: 'Profil' },
   ];
 
@@ -22,7 +23,7 @@ const Navbar = ({ scrollToSection }) => {
   };
 
   return (
-    <header className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-4xl font-sans">
+    <header className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-5xl font-sans">
       <div 
         className={`md:hidden absolute bottom-16 right-0 w-48 bg-[#BFD4DB]/95 backdrop-blur-lg border border-[#96B9D0] rounded-2xl p-2 shadow-xl transition-all duration-300 ease-in-out origin-bottom-right transform ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
@@ -33,7 +34,7 @@ const Navbar = ({ scrollToSection }) => {
             <button
               key={item.id}
               onClick={() => handleMobileClick(item.id)}
-              className="px-3 py-2 text-left text-xs text-[#1B354D] hover:text-[#14263B] font-medium rounded-xl hover:bg-[#AECBD6] transition-colors"
+              className="px-3 py-2 text-left text-xs text-[#3D426B] hover:text-[#14263B] font-medium rounded-xl hover:bg-[#AECBD6] transition-colors"
             >
               • {item.label}
             </button>

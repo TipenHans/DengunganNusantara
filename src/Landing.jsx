@@ -452,7 +452,11 @@ const Landing = () => {
           
           {sliderImages.length > 0 && (
             <div className="w-full max-w-xs flex flex-col items-center">
-
+                  <div className="text-center w-full mb-3">
+                    <h4 className="text-[#14263B] font-sans text-sm tracking-widest font-semibold uppercase">
+                      Asep
+                    </h4>
+                  </div>
               <div 
                 onClick={() => setActivePopupData(sliderImages[0])}
                 className="h-full w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-[#A4C3D2]/20 cursor-pointer hover:border-[#78A2CC] hover:shadow-[0_0_25px_rgba(120,162,204,0.3)] transition-all group relative"
@@ -479,7 +483,7 @@ const Landing = () => {
 
           <div className="w-24 h-[2px] bg-[#78A2CC]/30 rounded-full md:block hidden"></div>
 
-          <div className="w-full flex flex-col items-center">
+          <div id="apa-kata-mereka" className="w-full flex flex-col items-center">
             <div 
               ref={sliderRef}
               className="flex md:grid md:grid-cols-3 w-full overflow-x-auto md:overflow-x-visible snap-x snap-mandatory no-scrollbar pb-6 gap-0 md:gap-6"
