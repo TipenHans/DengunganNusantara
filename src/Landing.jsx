@@ -324,7 +324,7 @@ const Landing = () => {
 
         <div className="hidden md:block absolute bottom-[5%] right-[5%] w-40 h-40 md:w-56 md:h-56 z-10 select-none group">
           <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white/95 backdrop-blur-sm text-[#14263B] text-xs p-3 rounded-2xl shadow-xl border border-[#96B9D0]/40 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 font-sans font-medium text-center leading-relaxed">
-            Halo teman-teman nama aku Gang, penasaran sama sejarah dan budaya gong yang ada di Nusantara? Yuk kita jelajahi artikel ini bersama!
+            Halo teman-teman nama aku Ging, penasaran sama sejarah dan budaya gong yang ada di Nusantara? Yuk kita jelajahi artikel ini bersama!
             <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-white/95"></div>
           </div>
 
